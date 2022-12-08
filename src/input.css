@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+#weather {
+    background-position: center !important;
+    background-size: cover !important;
+}
+/* 
+.blog-img::after {
+    content: " ";
+    top: 0;
+    width: 45px;
+    height: 100%;
+    position: absolute;
+    background: url('../images/play-button.png');
+    background-size: contain;
+} */
+.blog-img::after {
+    content: " ";
+    top: 0;
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    background-color: #fff;
+    z-index: 10;
+}

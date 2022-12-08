@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="./dist/output.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="bg-darkBlueR ">
+        <!-- Container  -->
+        <div class="max-w-[1024px] flex flex-row items-center justify-between mx-auto p-4">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4">
+                <img src="./images/logo.png" alt="">
+                <div class="flex flex-col ">
+                    <h1 class="text-white font-bold text-xl font-roboto ">Weather</h1>
+                    <p class="text-secondary text-xs font-poppins ">tagline goes here</p>
+                </div>
+            </div>
+            <!-- Menu  -->
+            <div class="hidden items-center md:space-x-0 md:flex">
+                <a href="" class="text-white font-roboto border-2 border-transparent text-sm px-4 py-2 hover:text-primary hover:rounded-full hover:border-primary">Home</a>
+                <a href="" class="text-white font-roboto border-2 border-transparent text-sm px-4 py-2 hover:text-primary hover:rounded-full hover:border-primary">News</a>
+                <a href="" class="text-white font-roboto border-2 border-transparent text-sm px-4 py-2 hover:text-primary hover:rounded-full hover:border-primary">Live Cameras</a>
+                <a href="" class="text-white font-roboto border-2 border-transparent text-sm px-4 py-2 hover:text-primary hover:rounded-full hover:border-primary">Photos</a>
+                <a href="" class="text-white font-roboto border-2 border-transparent text-sm px-4 py-2 hover:text-primary hover:rounded-full hover:border-primary">Contact</a>
+            </div>
+            <!-- Mobile Menu Bar -->
+            <div class="md:hidden">
+                <i class="fa-solid fa-bars text-white"></i>
+            </div>
+        </div>
+    </nav>
+    <!-- Weather  -->
+    <section id="weather" style="background: url('./images/background.jpg');">
+        <!-- Container  -->
+        <div class="max-w-[1024px] mx-auto flex flex-col p-4">
+            <!-- City Form  -->
+            <form action="" class="relative flex justify-between my-12">
+                <input class="rounded-full w-full px-6 py-4 bg-darkBlueR focus:border-none text-white" type="text" name="" id="" placeholder="Type your city">
+                <button type="submit" class="absolute right-0 text-white bg-primary rounded-full px-10 py-3 mt-1 mr-1">Find</button>
+            </form>
+
+            <!-- Forecast  -->
+           <div class="flex flex-col md:flex-row shadow-lg">
+                <div class="w-full md:w-2/5 lg:w-1/2" >
+                    <div class="flex flex-col bg-lightBlue md:rounded-l-lg">
+                        <div class="flex justify-between p-5 bg-lightBlueRGB">
+                            <p class="text-gray-300 text-sm">Monday</p>
+                            <p class="text-gray-300 text-sm">6 Oct</p>
+                        </div>
+                        <div class="flex flex-col space-y-12 h-[250px] p-5 md:space-y-8">
+                            <h4 class="text-secondary text-lg text-center font-semibold md:text-left">Dhaka</h4>
+                            <div class="flex flex-row  items-center justify-around">
+                                <h1 class="relative text-6xl text-white font-bold font-roboto md:text-5xl lg:text-7xl">23<span class="absolute -top-4 text-4xl">o</span> C</h1>
+                                <img class="w-[90px] md:w-[70px]" src="./images/icons/icon-1.svg" alt="">
+                            </div>
+                            <div class="flex space-x-6 justify-center md:justify-start">
+                                <div class="flex flex-row space-x-2">
+                                    <img class="h-full" src="./images/icon-umberella.png" alt="">
+                                    <p class="text-secondary ">20%</p>
+                                </div>
+                                <div class="flex flex-row space-x-2">
+                                    <img class="h-full" src="./images/icon-wind.png" alt="">
+                                    <p class="text-secondary ">18km/h</p>
+                                </div>
+                                <div class="flex flex-row space-x-2">
+                                    <img class="h-full" src="./images/icon-compass.png" alt="">
+                                    <p class="text-secondary ">East</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-3/5 lg:w-1/2 forecast grid grid-cols-6">
+                    <!-- Forecast 1nd Item  -->
+                    <div class="flex-col md:flex bg-darkLightBlue">
+                        <div class="flex justify-center p-5 bg-lightBlueRGB">
+                            <p class="text-gray-300 text-sm">Tuesday</p>
+                        </div>
+                        <div class="flex flex-col justify-center items-center  h-[250px] space-y-6">
+                            <img class="w-[48px] h-[48px]" src="./images/icons/icon-3.svg" alt="">
+                            <h4 class="relative text-2xl text-white font-bold font-roboto">23<span class="absolute -top-2 right-2 mr-2 text-base ">o</span>  C</h4>
+                        </div>
+                    </div>
+                    <!-- Forecast 2rd Item  -->
+                    <div class="flex-col md:flex bg-lightBlue">
+                        <div class="flex justify-center p-5 bg-lightBlueRGB">
+                            <p class="text-gray-300 text-sm">Wednesday</p>
+                        </div>
+                        <div class="flex flex-col justify-center items-center h-[250px] space-y-6">
+                            <img class="w-[48px] h-[48px]" src="./images/icons/icon-5.svg" alt="">
+                            <h4 class="relative text-2xl text-white font-bold font-roboto">24<span class="absolute -top-2 right-2 mr-2 text-base ">o</span>  C</h4>
+                        </div>
+                    </div>
+                    <!-- Forecast 3th Item  -->
+                    <div class="flex-col md:flex bg-darkLightBlue">
+                        <div class="flex justify-center p-5 bg-lightBlueRGB">
+                            <p class="text-gray-300 text-sm">Thursday</p>
+                        </div>
+                        <div class="flex flex-col justify-center items-center h-[250px] space-y-6">
+                            <img class="w-[48px] h-[48px]" src="./images/icons/icon-7.svg" alt="">
+                            <h4 class="relative text-2xl text-white font-bold font-roboto">22<span class="absolute -top-2 right-2 mr-2 text-base ">o</span>  C</h4>
+                        </div>
+                    </div>
+                    <!-- Forecast 4th Item  -->
+                    <div class="flex-col md:flex bg-lightBlue">
+                        <div class="flex justify-center p-5 bg-lightBlueRGB">
+                            <p class="text-gray-300 text-sm">Friday</p>
+                        </div>
+                        <div class="flex flex-col justify-center items-center h-[250px] space-y-6">
+                            <img class="w-[48px] h-[48px]" src="./images/icons/icon-12.svg" alt="">
+                            <h4 class="relative text-2xl text-white font-bold font-roboto">18<span class="absolute -top-2 right-2 mr-2 text-base ">o</span>  C</h4>
+                        </div>
+                    </div>
+                    <!-- Forecast 5th Item  -->
+                    <div class="flex-col md:flex bg-darkLightBlue">
+                    <div class="flex justify-center p-5 bg-lightBlueRGB">
+                        <p class="text-gray-300 text-sm">Saturday</p>
+                    </div>
+                    <div class="flex flex-col justify-center items-center h-[250px] space-y-6">
+                        <img class="w-[48px] h-[48px]" src="./images/icons/icon-12.svg" alt="">
+                        <h4 class="relative text-2xl text-white font-bold font-roboto">23<span class="absolute -top-2 right-2 mr-2 text-base ">o</span>  C</h4>
+                    </div>
+                </div>
+                    <!-- Forecast 6th Item  -->
+                    <div class=" flex-col md:flex bg-lightBlue md:rounded-r-lg">
+                        <div class="flex justify-center p-5 bg-lightBlueRGB">
+                            <p class="text-gray-300 text-sm">Sunday</p>
+                        </div>
+                        <div class="flex flex-col justify-center items-center h-[250px] space-y-6">
+                            <img class="w-[48px] h-[48px]" src="./images/icons/icon-13.svg" alt="">
+                            <h4 class="relative text-2xl text-white font-bold font-roboto">20<span class="absolute -top-2 right-2 mr-2 text-base ">o</span>  C</h4>
+                        </div>
+                    </div>
+                </div>
+           </div>
+        </div>
+    </section>
+    <!-- Live Cameras -->
+    <section class="bg-darkBlueR py-8 md:py-12 lg:pt-16 lg:pb-10">
+        <div class="max-w-[1024px] mx-auto flex flex-col px-4">
+            <h3 class="text-white text-4xl font-light">Live cameras</h3>
+            <div class="grid grid-cols-1 space-y-5 gap-6 py-8 md:space-y-0 md:grid-cols-2 lg:grid-cols-4">
+                <div class="flex flex-col items-center space-y-4 lg:items-start">
+                    <img class="blog-img relative w-3/4 rounded-lg lg:w-full" src="./images/new york.jpg" alt="">
+                    <div class="flex flex-col">
+                        <h3 class="text-white font-light text-lg">New York</h3>
+                        <p class="text-white font-light text-xs">8 oct, 8:00AM</p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center space-y-4 lg:items-start">
+                    <img class="w-3/4 rounded-lg lg:w-full" src="./images/Dhaka.jpg" alt="">
+                    <div class="flex flex-col">
+                        <h3 class="text-white font-light text-lg">Dhaka</h3>
+                        <p class="text-white font-light text-xs">8 oct, 8:00AM</p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center space-y-4 lg:items-start">
+                    <img class="w-3/4 rounded-lg lg:w-full" src="./images/new delhi.jpg" alt="">
+                    <div class="flex flex-col">
+                        <h3 class="text-white font-light text-lg">New Delhi</h3>
+                        <p class="text-white font-light text-xs">8 oct, 8:00AM</p>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center space-y-4 lg:items-start">
+                    <img class="w-3/4 rounded-lg lg:w-full" src="./images/london.jpg" alt="">
+                    <div class="flex flex-col">
+                        <h3 class="text-white font-light text-lg">London</h3>
+                        <p class="text-white font-light text-xs">8 oct, 8:00AM</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Blog -->
+    <section class="bg-grayLight py-8 md:py-12 lg:py-12">
+        <div class="max-w-[1024px] mx-auto flex flex-col px-4">
+            <div class="grid grid-cols-1 gap-6 space-y-6 md:space-y-0 md:grid-cols-2 lg:grid-cols-3">
+                <div class="flex flex-row space-x-6">
+                    <h2 class="text-primary font-light text-2xl ">06.10</h2>
+                    <div class="flex flex-col space-y-4">
+                        <h3 class="text-white font-semibold text-sm ">Doloremque laudantium totam sequi </h3>
+                        <p class="text-secondary text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo saepe assumenda dolorem modi, expedita voluptatum ducimus necessitatibus. Asperiores quod reprehenderit necessitatibus harum, mollitia, odit et consequatur maxime nisi amet doloremque.</p>
+                        <img class="w-[12px]" src="./images/arrow.png" alt="">
+                    </div>
+                </div>
+                <div class="flex flex-row space-x-6">
+                    <h2 class="text-primary font-light text-2xl ">06.10</h2>
+                    <div class="flex flex-col space-y-4">
+                        <h3 class="text-white font-semibold text-sm ">Doloremque laudantium totam sequi </h3>
+                        <p class="text-secondary text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo saepe assumenda dolorem modi, expedita voluptatum ducimus necessitatibus. Asperiores quod reprehenderit necessitatibus harum, mollitia, odit et consequatur maxime nisi amet doloremque.</p>
+                        <img class="w-[12px]" src="./images/arrow.png" alt="">
+                    </div>
+                </div>
+                <div class="flex flex-row space-x-6">
+                    <h2 class="text-primary font-light text-2xl ">06.10</h2>
+                    <div class="flex flex-col space-y-4">
+                        <h3 class="text-white font-semibold text-sm ">Doloremque laudantium totam sequi </h3>
+                        <p class="text-secondary text-sm font-light">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo saepe assumenda dolorem modi, expedita voluptatum ducimus necessitatibus. Asperiores quod reprehenderit necessitatibus harum, mollitia, odit et consequatur maxime nisi amet doloremque.</p>
+                        <img class="w-[12px]" src="./images/arrow.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Features -->
+    <section class="bg-darkBlueR py-8 md:py-12 lg:py-12">
+        <div class="max-w-[1024px] mx-auto flex flex-col px-4">
+            <div class="grid grid-cols-1 gap-4 space-x-6 space-y-8 md:space-y-0 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Application features -->
+                <div class="flex flex-col space-y-6 md:space-y-8">
+                    <h1 class="text-white text-3xl font-light">Application features</h1>
+                    <div class="flex flex-col space-y-4">
+                        <div class="flex flex-row space-x-6">
+                            <img class="w-[12px] h-[7px] mt-2" src="./images/arrow.png" alt="">
+                            <div class="flex flex-col space-y-2">
+                                <h3 class="text-white font-semibold text-sm ">Natus error sit voluptatem accusantium</h3>
+                                <p class="text-secondary text-sm font-light">Doloremque laudantium totam rem aperiam Inventore veritatis et quasi architecto beatae vitae.</p>
+                            </div>  
+                        </div>
+                        <div class="flex flex-row space-x-6">
+                            <img class="w-[12px] h-[7px] mt-2" src="./images/arrow.png" alt="">
+                            <div class="flex flex-col space-y-2">
+                                <h3 class="text-white font-semibold text-sm ">Natus error sit voluptatem accusantium</h3>
+                                <p class="text-secondary text-sm font-light">Doloremque laudantium totam rem aperiam Inventore veritatis et quasi architecto beatae vitae.</p>
+                            </div>  
+                        </div>
+                        <div class="flex flex-row space-x-6">
+                            <img class="w-[12px] h-[7px] mt-2" src="./images/arrow.png" alt="">
+                            <div class="flex flex-col space-y-2">
+                                <h3 class="text-white font-semibold text-sm ">Natus error sit voluptatem accusantium</h3>
+                                <p class="text-secondary text-sm font-light">Doloremque laudantium totam rem aperiam Inventore veritatis et quasi architecto beatae vitae.</p>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                <!-- Weather analyssis -->
+                <div class="flex flex-col space-y-6 md:space-y-8">
+                    <h1 class="text-white text-3xl font-light">Weather analyssis</h1>
+                    <div class="flex flex-col space-y-4">
+                        <div class="flex flex-row space-x-2 border-b border-gray-700 pb-2">
+                            <img class="w-[12px] h-[7px] mt-2" src="./images/arrow.png" alt="">
+                            <div class="flex flex-col space-y-4">
+                                <a href="#" class="text-white font-light text-sm hover:text-primary">Eaque ipsa quae ab illo inventore veritatis quasi</a>
+                            </div>  
+                        </div>
+                        <div class="flex flex-row space-x-2 border-b border-gray-700 pb-2">
+                            <img class="w-[12px] h-[7px] mt-2" src="./images/arrow.png" alt="">
+                            <div class="flex flex-col space-y-4">
+                                <a href="#" class="text-white font-light text-sm hover:text-primary">Architecto beatae vitae dicta sunt explicabo</a>
+                            </div>  
+                        </div>
+                        <div class="flex flex-row space-x-2 border-b border-gray-700 pb-2">
+                            <img class="w-[12px] h-[7px] mt-2" src="./images/arrow.png" alt="">
+                            <div class="flex flex-col space-y-4">
+                                <a href="#" class="text-white font-light text-sm hover:text-primary">Nemo enim ipsam voluptatem quia voluptas</a>
+                            </div>  
+                        </div>
+                        <div class="flex flex-row space-x-2 border-b border-gray-700 pb-2">
+                            <img class="w-[12px] h-[7px] mt-2" src="./images/arrow.png" alt="">
+                            <div class="flex flex-col space-y-4">
+                                <a href="#" class="text-white font-light text-sm hover:text-primary">Aspernatur aut odit aut fugit, sed quia consequuntur</a>
+                            </div>  
+                        </div>
+                        <div class="flex flex-row space-x-2 border-b border-gray-700 pb-2">
+                            <img class="w-[12px] h-[7px] mt-2" src="./images/arrow.png" alt="">
+                            <div class="flex flex-col space-y-4">
+                                <a href="#" class="text-white font-light text-sm hover:text-primary">Magni dolores eos qui ratione voluptatem sequi</a>
+                            </div>  
+                        </div>
+                        <div class="flex flex-row space-x-2 border-b border-gray-700 pb-2">
+                            <img class="w-[12px] h-[7px] mt-2" src="./images/arrow.png" alt="">
+                            <div class="flex flex-col space-y-4">
+                                <a href="#" class="text-white font-light text-sm hover:text-primary">Neque porro quisquam est qui dolorem ipsum quia</a>
+                            </div>  
+                        </div>                   
+                        
+                    </div>
+                </div>
+                <!-- Awesome Photos -->
+                <div class="flex flex-col space-y-6 md:space-y-8 md:col-span-2 lg:col-span-1">
+                    <h1 class="text-white text-3xl font-light">Awesome Photos</h1>
+                    <div class="grid grid-cols-3 gap-3">
+                        <img class="w-full" src="./images/thumb-1.jpg" alt="">
+                        <img class="w-full" src="./images/thumb-2.jpg" alt="">
+                        <img class="w-full" src="./images/thumb-3.jpg" alt="">
+                        <img class="w-full" src="./images/thumb-4.jpg" alt="">
+                        <img class="w-full" src="./images/thumb-5.jpg" alt="">
+                        <img class="w-full" src="./images/thumb-6.jpg" alt="">
+                        <img class="w-full" src="./images/thumb-7.jpg" alt="">
+                        <img class="w-full" src="./images/thumb-8.jpg" alt="">
+                        <img class="w-full" src="./images/thumb-9.jpg" alt="">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="bg-grayLight py-8 md:py-12 lg:py-12">
+        <div class="max-w-[1024px] mx-auto flex flex-col items-center space-y-12 px-4 lg:items-start">
+            <div class="flex flex-col items-center space-y-6 lg:space-y-0 lg:space-x-32 w-full lg:justify-around lg:flex-row">
+                <form action="" class="relative flex justify-between w-full">
+                    <input class="rounded-full w-full px-6 py-4 bg-darkBlueR focus:border-none text-white" type="text" name="" id="" placeholder="Type your city">
+                    <button type="submit" class="absolute right-0 text-white bg-primary rounded-full px-10 py-3 mt-1 mr-1">Find</button>  
+                </form>
+                <div class="flex flex-row space-x-6 items-center">
+                    <a href="#" class="text-primary rounded-full bg-darkBlueR px-4 py-2">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="text-primary rounded-full bg-darkBlueR px-3 py-2">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="text-primary rounded-full bg-darkBlueR px-3 py-2">
+                        <i class="fa-brands fa-google-plus"></i>
+                    </a>
+                    <a href="#" class="text-primary rounded-full bg-darkBlueR px-3 py-2">
+                        <i class="fa-brands fa-pinterest"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="flex">
+                <p class="text-secondary text-sm text-center lg:text-left">Copyright ©2022 Weather. Designed by Rakib. All rights reserved</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
