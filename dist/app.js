@@ -2,7 +2,7 @@
 const getLatLon = async()=>{
     const searchCity = document.getElementById('searchCity').value;
     let apiKey = 'fc436c486d8043e316f221ef6c5f8172';
-    let urlLatLon = `http://api.openweathermap.org/geo/1.0/direct?q=${searchCity}&limit=5&appid=${apiKey}`;
+    let urlLatLon = `https://api.openweathermap.org/geo/1.0/direct?q=${searchCity}&limit=5&appid=${apiKey}`;
     const res = await fetch(urlLatLon);
     const data = await res.json();
     showCity(data);
