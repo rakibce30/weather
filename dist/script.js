@@ -2,7 +2,7 @@
 document.getElementById('city-btn').addEventListener('click', ()=>{
     let getCityName = document.getElementById('city-name').value;
     let apiKey = 'fc436c486d8043e316f221ef6c5f8172';
-    let urlLatLon = `http://api.openweathermap.org/geo/1.0/direct?q=${getCityName}&limit=1&appid=${apiKey}`;
+    let urlLatLon = `https://api.openweathermap.org/geo/1.0/direct?q=${getCityName}&limit=1&appid=${apiKey}`;
 
     function fetchLatLon(url){
         fetch(url)
